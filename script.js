@@ -127,7 +127,7 @@ const add=function(a,b){
 
 // console.log(myFriends[myFriends.length - 1]);
 
-// for of for in loop
+// for of / for in loop
 //const myFriends = ['pri','rok','arj','vis'];
 // for(let elements in myFriends){
 //    console.log(elements)
@@ -139,4 +139,6 @@ for(let elements of myFriends){
    console.log(elements)
 
 }
+
+
 
