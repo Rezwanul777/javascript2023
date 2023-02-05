@@ -78,23 +78,23 @@ const myCollesgues=['pri','rok','arj','vis']
 // function(a, b){return a-b}
 
 // for asecnding order 
-const array1 = [1, 30, 4, 21, 100000, 99];
+//const array1 = [1, 30, 4, 21, 100000, 99];
 
-array1.sort(function(a,b){
-    //console.log(a,b);
-    if(a>b){
-        return 1;
-        // b comes first and then a 
-    }
-    if(a<b){
-        // a comes first and then b 
-        return -1;
-    }
-    if(a==b){
-        // No changes
-        return 0;
-    }
-});
+// array1.sort(function(a,b){
+//     //console.log(a,b);
+//     if(a>b){
+//         return 1;
+//         // b comes first and then a 
+//     }
+//     if(a<b){
+//         // a comes first and then b 
+//         return -1;
+//     }
+//     if(a==b){
+//         // No changes
+//         return 0;
+//     }
+// });
 
 //console.log(array1);
 
@@ -173,8 +173,8 @@ const countAnimal=animals2.unshift("cow")
 // The second parameter (0) defines how many elements should be removed.
 //console.log(months)
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2, 2, "Lemon", "Kiwi");
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2, 2, "Lemon", "Kiwi");
 //The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
 //console.log(fruits)
 
@@ -216,7 +216,7 @@ const months = ['Jan', 'March', 'april', 'June', 'July']
 
 //Delete month June from above array Dynamically
 
-const indexOfMonth= months.indexOf('june')
+const indexOfMonth= months.indexOf('June')
 if(indexOfMonth!==-1){
    const deleteMonth = months.splice(indexOfMonth,1) 
    console.log(months)
@@ -229,8 +229,115 @@ if(indexOfMonth!==-1){
 
 //The method then selects elements from the start argument, and up to (but not including) the end argument.
 const sliceFruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-const citrus = fruits.slice(1, 3);
+const citrus = sliceFruits.slice(1,3);
+//console.log(citrus)
 
+// Array.prototype.map() 
+
+// let newArray = arr.map(callback(currentValue[, index[, array]]) {
+//     // return element for newArray, after executing something
+//   }[, thisArg]);
+
+// Returns a new array containing the results of calling a 
+// function on every element in this array. 
+
+ const arrayMap = [1, 4, 9, 16, 25];
+
+let newArr = arrayMap.map((curElem,index,arr) => {
+    return curElem *2;
+})
+console.log(arrayMap);
+console.log(newArr);
+
+// what is the defference between map() and forEach()
+
+// Some of the difference between map() and forEach() methods are listed below −
+
+// The map() method returns a new array, whereas the forEach() method does not return a new array.
+
+// The map() method is used to transform the elements of an array, whereas the forEach() method is used to loop through the elements of an array.
+
+// The map() method can be used with other array methods, such as the filter() method, whereas the forEach() method cannot be used with other array methods..
+
+// const arrayForEach = [1, 4, 9, 16, 25];
+
+// let newArrForEach = arrayMap.forEach((curElem,index,arr) => {
+//     return `Index no = ${index} and the value is ${curElem} belong to ${arr} `
+// })
+// console.log(arrayForEach);
+// console.log(newArrForEach);
+
+
+// challange
+
+//  
+//  2: Multiply each element by 2 and return only those 
+//     elements which are greater than 10?
+
+//1: Find the square root of each element in an array?
+let arr = [25, 36, 49, 64, 81];
+
+let arrSqr = arr.map((curElem) =>  Math.sqrt(curElem) )
+//console.log(arrSqr);
+
+//2: Multiply each element by 2 and return only those 
+//     elements which are greater than 10?
+
+// let arr2=[4,3,5,6,7,9]
+// let arrResult=arr2.map((ele)=>ele*2).filter((ele)=>ele>10)
+// console.log(arrResult)
+
+//JavaScript Array reduce()
+
+//Syntax:
+//array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+//Example:
+const numbers = [15, 2, 10, 47,9];
+const totalSum=numbers.reduce((total,curvalue)=>total+curvalue)
+
+//how it works
+
+//total     curValue =totalSum
+    // 15        2  =17
+    // 17        10 =27
+    // 27         47= 74
+    // 74         9  =83
+    // 83            =83
+
+//console.log(totalSum)
+
+// we can also find Max and min value vy reduce method
+const numbersMax = [15, 2, 10, 47,9,90,100,3456,23];
+const maxNum=numbersMax.reduce((acc,val)=>Math.max(acc,val))
+
+const numbersMin = [15, 2, 10, 47,9,90,100,3456,23];
+const minNum=numbersMin.reduce((acc,val)=>Math.min(acc,val))
+// console.log(maxNum)
+// console.log(minNum)
+
+// how to calculate the total price of array of onbject
+const products=[
+    {
+        name:"pen",
+        price:5,
+        number:10
+    },
+    {
+        name:"pencil",
+        price:15,
+        number:5
+    },
+
+    {
+        name:"color",
+        price:45,
+        number:13
+    }
+]
+
+const totalPrice=products.reduce((total,item)=>total + (item.price * item.number),0)
+console.log(totalPrice)
 
 
 
