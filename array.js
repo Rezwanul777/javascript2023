@@ -337,8 +337,56 @@ const products=[
 ]
 
 const totalPrice=products.reduce((total,item)=>total + (item.price * item.number),0)
-console.log(totalPrice)
+//console.log(totalPrice)
 
+//with reduce method
+// How to fatten an array 
+// converting 2d and 3d array into one dimensional array 
+
+//How to fatten an array converting 2d into one dimensional array 
+const arrReduce = [
+            ['pri', 'rumman'],
+            ['minhaj', 'nasim'],
+            ['faruk', 'rakib'],
+            ['lubnaapu', 'shim', 'ayaan', 'tuntun'],
+        ]
+    
+
+    //['shim', 'ayaan', 'tuntun']
+
+const newResult=arrReduce.reduce((acc,curValue)=>{
+    return acc.concat(curValue)
+ 
+
+})
+console.log(newResult)
+
+///How to fatten an array converting 3d into one dimensional array 
+const arrReduce1 = [
+    ['pri', 'rumman'],
+    ['minhaj', 'nasim'],
+    ['faruk', 'rakib'],
+    ['lubnaapu', ['shim', 'ayaan', 'tuntun'],
+]
+]
+
+//const newResult1=arrReduce1.flat(Infinity)
+
+//console.log(arrReduce1.flat(3));
+
+
+// includes Method of array
+// const array1 = [1, 2, 3];
+
+// console.log(array1.includes(2));
+
+
+// const pets = ['cat', 'dog', 'bat'];
+
+// console.log(pets.includes('cat'));
+
+
+// console.log(pets.includes('at'));
 
 
 
