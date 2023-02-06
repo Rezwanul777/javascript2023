@@ -156,10 +156,6 @@ const countAnimal=animals2.unshift("cow")
 //or----------------details
 
 
-
-
-// ed.
-
 // The splice() method returns an array with the deleted items: 
 
 // 1: Add Dec at the end of an array?
@@ -370,7 +366,7 @@ const arrReduce1 = [
 ]
 ]
 
-//const newResult1=arrReduce1.flat(Infinity)
+const newResult1=arrReduce1.flat(Infinity)
 
 //console.log(arrReduce1.flat(3));
 
