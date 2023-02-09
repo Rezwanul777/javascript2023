@@ -195,4 +195,4 @@ const myArray = text5.split(" ", 3);
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let textJoin = fruits.join();
-//console.log(textJoin)
+console.log(textJoin)

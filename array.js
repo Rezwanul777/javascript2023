@@ -1,3 +1,22 @@
+// array length of index
+//var myFriends = ['pri','rok','arj','vis'];
+
+// console.log(myFriends[myFriends.length - 1]);
+
+// for of / for in loop
+//const myFriends = ['pri','rok','arj','vis'];
+// for(let elements in myFriends){
+//    console.log(elements)
+
+// }
+
+const myFriends1 = ['pri','rok','arj','vis'];
+for(let elements of myFriends1){
+   console.log(elements)
+
+}
+
+
 //Array traversal
 
 const myFriends = ['pri','rok','arj','vis'];

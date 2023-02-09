@@ -122,23 +122,3 @@ const add=function(a,b){
 
 //console.log(add(4,6))
 
-// array length of index
-//var myFriends = ['pri','rok','arj','vis'];
-
-// console.log(myFriends[myFriends.length - 1]);
-
-// for of / for in loop
-//const myFriends = ['pri','rok','arj','vis'];
-// for(let elements in myFriends){
-//    console.log(elements)
-
-// }
-
-const myFriends = ['pri','rok','arj','vis'];
-for(let elements of myFriends){
-   console.log(elements)
-
-}
-
-
-
