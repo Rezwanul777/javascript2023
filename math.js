@@ -32,7 +32,7 @@
 // Math.floor()  
 // Math.floor(x) returns the value of x rounded down to its nearest integer
 
-// console.log(Math.floor(4.7)); 
+ //console.log(Math.floor(4.7)); 
 // console.log(Math.floor(99.1)); 
 
 // Math.min() 
